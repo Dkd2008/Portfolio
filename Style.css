@@ -1,0 +1,575 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+header h1 {
+    font-size: 26px;
+    margin-right: auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background: white;
+    margin: 35px 0;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 20px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+section h3 {
+    color: #2563eb;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+#About p {
+    font-size: 17px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+#Education p {
+    font-size: 16px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+#Skills li {
+    transition: 0.3s;
+}
+
+#Skills li:hover {
+    transform: translateX(8px);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#Projects h3 {
+    font-size: 21px;
+}
+
+#Projects p {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#Contact a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+#Contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 22px;
+        margin: 25px 0;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    #About p {
+        font-size: 15px;
+    }
+}
+/* =========================
+   SMOOTH ANIMATIONS
+========================= */
+
+/* Smooth page movement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header animation */
+header {
+    animation: slideDown 0.8s ease;
+}
+
+/* Profile photo animation */
+header img {
+    animation: fadeIn 1s ease;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* Name animation */
+header h1 {
+    animation: fadeIn 1s ease 0.2s both;
+}
+
+/* Navigation animation */
+nav {
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+nav a {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Sections animation */
+section {
+    animation: fadeUp 0.8s ease both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Project description hover */
+#Projects p {
+    transition: transform 0.3s ease;
+}
+
+#Projects p:hover {
+    transform: translateX(5px);
+}
+
+/* Skills hover */
+#Skills li {
+    transition: transform 0.3s ease;
+}
+
+#Skills li:hover {
+    transform: translateX(8px);
+}
+
+/* Contact links */
+#Contact a {
+    transition: color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    animation: fadeIn 1s ease;
+}
+
+
+/* =========================
+   ANIMATION KEYFRAMES
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   DARK MODE ANIMATION
+========================= */
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+section {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+header,
+footer {
+    transition: background-color 0.4s ease;
+}
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+#darkModeBtn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode section {
+    background: #1e293b;
+    color: #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode section h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode section h3 {
+    color: #60a5fa;
+}
+
+body.dark-mode #Projects p {
+    background: #334155;
+}
+
+body.dark-mode #Contact a {
+    color: #60a5fa;
+}
+
+body.dark-mode #darkModeBtn {
+    background: #334155;
+    color: white;
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    padding: 60px;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-intro {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 25px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.hero-text > p {
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.btn-outline:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    animation: heroFloat 3s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   HERO DARK MODE
+========================= */
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+body.dark-mode .hero-text h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .hero-text > p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .hero-image img {
+    border-color: #334155;
+}
+
+
+/* =========================
+   HERO MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text > p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
