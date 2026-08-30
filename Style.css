@@ -1,0 +1,713 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.7;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+    background: #111827;
+    color: white;
+
+    padding: 15px 7%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    animation: slideDown 0.7s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav {
+    display: flex;
+    gap: 20px;
+
+    margin-left: auto;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DARK MODE BUTTON
+===================================== */
+
+#darkModeBtn {
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: white;
+    color: #111827;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#darkModeBtn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+main {
+    width: 86%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 70px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf2ff,
+            #ffffff
+        );
+
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-content {
+    max-width: 650px;
+
+    animation: fadeUp 0.9s ease;
+}
+
+.hello {
+    color: #2563eb;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 58px;
+
+    color: #111827;
+
+    margin: 8px 0;
+}
+
+.hero h2 {
+    color: #2563eb;
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    font-size: 18px;
+
+    color: #4b5563;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+}
+
+.btn-outline:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =====================================
+   HERO IMAGE
+===================================== */
+
+.hero-image img {
+    width: 270px;
+    height: 270px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+section:not(.hero) {
+    background: white;
+
+    margin: 35px 0;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    animation: fadeUp 0.8s ease both;
+
+    transition:
+        background-color 0.4s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+section:not(.hero):hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
+section h2 {
+    font-size: 30px;
+
+    color: #111827;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #2563eb;
+
+    padding-left: 12px;
+}
+
+section h3 {
+    color: #2563eb;
+
+    margin: 20px 0 10px;
+}
+
+
+/* =====================================
+   ABOUT
+===================================== */
+
+#About p {
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+
+/* =====================================
+   EDUCATION
+===================================== */
+
+.education-card {
+    background: #f3f6fb;
+
+    padding: 20px;
+
+    margin: 15px 0;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #2563eb;
+
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(6px);
+}
+
+
+/* =====================================
+   SKILLS
+===================================== */
+
+.skills-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.skill {
+    background: #eff6ff;
+
+    color: #1e40af;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+
+    background: #dbeafe;
+}
+
+
+/* =====================================
+   PROJECTS
+===================================== */
+
+.project-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    background: #f3f6fb;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+
+    border-top: 4px solid #2563eb;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    margin: 12px 0;
+}
+
+.project-card span {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+#Contact p {
+    margin: 12px 0;
+}
+
+#Contact a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+#Contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark-mode {
+    background: #0f172a;
+
+    color: #e5e7eb;
+}
+
+body.dark-mode .hero {
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+}
+
+body.dark-mode .hero h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .hero-description {
+    color: #cbd5e1;
+}
+
+body.dark-mode section:not(.hero) {
+    background: #1e293b;
+
+    color: #e5e7eb;
+}
+
+body.dark-mode section h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .education-card,
+body.dark-mode .project-card {
+    background: #334155;
+}
+
+body.dark-mode .skill {
+    background: #334155;
+
+    color: #bfdbfe;
+}
+
+body.dark-mode .skill:hover {
+    background: #475569;
+}
+
+body.dark-mode .project-card span {
+    color: #60a5fa;
+}
+
+body.dark-mode #Contact a {
+    color: #60a5fa;
+}
+
+body.dark-mode .hero-image img {
+    border-color: #334155;
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 18px;
+    }
+
+    nav {
+        margin-left: 0;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 50px 20px;
+
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section:not(.hero) {
+        padding: 23px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+}
